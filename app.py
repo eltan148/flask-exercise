@@ -40,7 +40,6 @@ def create_response(
 ~~~~~~~~~~~~ API ~~~~~~~~~~~~
 """
 
-
 @app.route("/")
 def hello_world():
     return create_response({"content": "hello world!"})
@@ -55,12 +54,6 @@ def mirror(name):
 # TODO: Implement the rest of the API here!
 
 #### START
-
-from flask import Flask, request
-from mockdb import mockdb_interface as db
-from utils import create_response
-
-app = Flask(__name__)
 
 @app.route('/users', methods=['GET'])
 def get_users():
@@ -107,9 +100,6 @@ def delete_user(user_id):
         return create_response(message='User deleted')
     else:
         return create_response(status=404, message='User not found')
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 #### END
 

@@ -39,7 +39,7 @@ Clone this repository (click the green button saying "Clone or Download", choose
 
 ```
 $ git clone https://github.com/eltan148/flask-exercise.git
-$ cd flask-exercise
+
 ```
 
 Then, setup your virtual environment and install the python dependencies required to run this app. We use pipenv, which automatically sets everything up, given a Pipfile and Pipfile.lock. Pipfile uses virtualenv, which is a virtual Python environment isolated from other Python projects, incapable of interfering with or being affected by other Python programs on the same machine. You are thus capable of running different versions of the same package or even different python versions.
@@ -47,8 +47,9 @@ Then, setup your virtual environment and install the python dependencies require
 ```
 cd flask-exercise
 
-python3.11 -m venv . # Crear un nuevo entorno virtual
-source ./bin/activate  # Activar el entorno virtual
+python3.11 -m venv venv  # Crear el entorno virtual en la carpeta 'venv'
+source venv/bin/activate  # Activar el entorno virtual
+
 ```
 
 Luego instalar flask
@@ -60,7 +61,7 @@ pip3 install flask
 Then, to start the server run:
 
 ```
-(backend-exercise)$ python app.py
+(venv)$ python app.py
 ```
 
 Note: This will remain a running process in your terminal, so you will need to open a new tab or window to execute other commands.
