@@ -61,7 +61,7 @@ pip3 install flask
 Then, to start the server run:
 
 ```
-(venv)$ python app.py
+(venv)$ python3 app.py
 ```
 
 Note: This will remain a running process in your terminal, so you will need to open a new tab or window to execute other commands.
